@@ -98,9 +98,10 @@ apply_patches() {
 prep_device() {
 
     # EMUI 9
-    unzip -o ./vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/isp_dts.zip -d ./vendor/huawei/hi6250-9-common/proprietary/vendor/firmware
+    # unzip -o ./vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/isp_dts.zip -d ./vendor/huawei/hi6250-9-common/proprietary/vendor/firmware
     # EMUI 8
-    unzip -o ./vendor/huawei/hi6250-8-common/proprietary/vendor/firmware/isp_dts.zip -d ./vendor/huawei/hi6250-8-common/proprietary/vendor/firmware
+    # unzip -o ./vendor/huawei/hi6250-8-common/proprietary/vendor/firmware/isp_dts.zip -d ./vendor/huawei/hi6250-8-common/proprietary/vendor/firmware
+    :
 }
 
 prep_treble() {
@@ -127,6 +128,7 @@ build_device() {
       	#export TEMPORARY_DISABLE_PATH_RESTRICTIONS
       	#breakfast ${1} 
       	#mka bootimage 2>&1 | tee make_anne.log 
+      	#mka recoveryimage 2>&1
         brunch ${1}
         mv $OUT/lineage-*.zip ./build-output/LeaOS-OSS-20.0-$BUILD_DATE-${1}.zip
 
