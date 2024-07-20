@@ -87,7 +87,6 @@ prep_build() {
 	repopick 321339 -r -f # Allow disabling USB notifications
 	repopick 340916 -r # SystemUI: add burnIn protection     
     fi
-
 }
 
 apply_patches() {
@@ -98,9 +97,9 @@ apply_patches() {
 prep_device() {
 
     # EMUI 9
-    # unzip -o ./vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/isp_dts.zip -d ./vendor/huawei/hi6250-9-common/proprietary/vendor/firmware
+    unzip -o ./vendor/huawei/hi6250-9-common/proprietary/vendor/firmware/isp_dts.zip -d ./vendor/huawei/hi6250-9-common/proprietary/vendor/firmware
     # EMUI 8
-    # unzip -o ./vendor/huawei/hi6250-8-common/proprietary/vendor/firmware/isp_dts.zip -d ./vendor/huawei/hi6250-8-common/proprietary/vendor/firmware
+    unzip -o ./vendor/huawei/hi6250-8-common/proprietary/vendor/firmware/isp_dts.zip -d ./vendor/huawei/hi6250-8-common/proprietary/vendor/firmware
     :
 }
 
@@ -142,7 +141,12 @@ build_treble() {
         (*) echo "Invalid target - exiting"; exit 1;;
     esac
     lunch lineage_${TARGET}-userdebug
+    make -j$(nproc --all) installclean
     make -j$(nproc --all) systemimage
+    #make -j$(nproc --all) target-files-package otatools
+
+    #bash ./lineage_build_leaos/sign.sh "vendor/extra/keys" $OUT/signed-target_files.zip
+    #unzip -jqo $OUT/signed-target_files.zip IMAGES/system.img -d $OUT
     mv $OUT/system.img ./build-output/LeaOS-20.0-$BUILD_DATE-${TARGET}.img
 }
 
