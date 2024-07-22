@@ -1,6 +1,6 @@
 #!/bin/bash
 echo ""
-echo "LineageOS 20.x Unified Buildbot - LeaOS version"
+echo "/e/ OS Unified Buildbot - v1-t version"
 echo "Executing in 5 seconds - CTRL-C to exit"
 echo ""
 sleep 5
