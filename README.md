@@ -1,16 +1,16 @@
 
-## Building PHH-based LineageOS GSIs ##
+## Building PHH-based  /e/ OS GSIs ##
 
-To get started with building LineageOS GSI, you'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html), and set up your environment by referring to [LineageOS Wiki](https://wiki.lineageos.org/devices/redfin/build) (mainly "Install the build packages") and [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
+To get started with building  /e/ OS GSI, you'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html), and set up your environment by referring to [LineageOS Wiki](https://wiki.lineageos.org/devices/redfin/build) (mainly "Install the build packages") and [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
 
 
 First, open a new Terminal window, create a new working directory for your LineageOS build (leaos for example) and navigate to it:
 
-    mkdir leaos; cd leaos
+    mkdir eos; cd eos
     
-Initialize your LineageOS workspace:
+Initialize your  /e/ OS workspace:
 
-    repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
+    repo init -u https://gitlab.e.foundation/e/os/android.git -b v1-t --git-lfs
 
 Clone both this and the patches repos:
 
@@ -34,7 +34,7 @@ This script is also used to make builds without sync repo. To do so add nosync i
 
     bash lineage_build_leaos/build.sh treble nosync 64VN
 
-## Building ANE-LX1 (P20 Lite) device LineageOS GSIs ##
+## Building ANE-LX1 (P20 Lite) device  /e/ OS GSIs ##
 
     bash lineage_build_leaos/build.sh device anne
 
