@@ -14,12 +14,12 @@ Initialize your  /e/ OS workspace:
 
 Clone both this and the patches repos:
 
-    git clone https://github.com/coreentin/e_build_v1-t e_build_v1-t -b v1-t
-    git clone https://github.com/coreentin/e_patches_v1-t e_patches_v1-t -b v1-t
+    git clone https://github.com/coreentin/e_build_v1-t e_build_v1 -b v1-t
+    git clone https://github.com/coreentin/e_patches_v1-t e_patches_v1 -b v1-t
 
 Finally, start the build script (64VN = Vanilia / 64GN = GoogleApps):
 
-    bash e_build_v1-t/build.sh treble 64VN
+    bash e_build_v1/build.sh treble 64VN
 
 
 Be sure to update the cloned repos from time to time!
@@ -32,10 +32,10 @@ EMUI 9 or EMUI 10 targets for Huawei re generated from AB images instead of sour
 
 This script is also used to make builds without sync repo. To do so add nosync in the command build line.
 
-    bash e_build_v1-t/build.sh treble nosync 64VN
+    bash e_build_v1/build.sh treble nosync 64VN
 
 ## Building ANE-LX1 (P20 Lite) device  /e/ OS GSIs ##
 
-    bash e_build_v1-t/build.sh device anne
+    bash e_build_v1/build.sh device anne
 
 ---
