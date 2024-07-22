@@ -19,7 +19,7 @@ Clone both this and the patches repos:
 
 Finally, start the build script (64VN = Vanilia / 64GN = GoogleApps):
 
-    bash lineage_build_leaos/build.sh treble 64VN
+    bash e_build_v1-t/build.sh treble 64VN
 
 
 Be sure to update the cloned repos from time to time!
@@ -32,10 +32,10 @@ EMUI 9 or EMUI 10 targets for Huawei re generated from AB images instead of sour
 
 This script is also used to make builds without sync repo. To do so add nosync in the command build line.
 
-    bash lineage_build_leaos/build.sh treble nosync 64VN
+    bash e_build_v1-t/build.sh treble nosync 64VN
 
 ## Building ANE-LX1 (P20 Lite) device  /e/ OS GSIs ##
 
-    bash lineage_build_leaos/build.sh device anne
+    bash e_build_v1-t/build.sh device anne
 
 ---
