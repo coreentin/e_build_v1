@@ -56,9 +56,9 @@ prep_build() {
     
     if [ ${MODE} == "device" ]
     then
-       cp ./lineage_build_leaos/local_manifests_oss/*.xml .repo/local_manifests
+       cp ./e_build_v1/local_manifests_oss/*.xml .repo/local_manifests
     else
-       cp ./lineage_build_leaos/local_manifests_leaos/*.xml .repo/local_manifests
+       cp ./e_build_v1/local_manifests_eos/*.xml .repo/local_manifests
     fi
     
     echo ""
@@ -87,7 +87,7 @@ prep_build() {
 
 apply_patches() {
     echo "Applying patch group ${1}"
-    bash ./lineage_build_leaos/apply_patches.sh ./lineage_patches_leaos/${1}
+    bash ./e_build_v1/apply_patches.sh ./e_patches_v1/${1}
 }
 
 prep_device() {
