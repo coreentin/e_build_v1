@@ -129,7 +129,7 @@ build_device() {
       	#breakfast ${1} 
       	#mka bootimage 2>&1 | tee make_anne.log 
         brunch ${1}
-        mv $OUT/lineage-*.zip ./build-output/LeaOS-OSS-20.0-$BUILD_DATE-${1}.zip
+        mv $OUT/lineage-*.zip ./build-output/e-OSS-t-$BUILD_DATE-${1}.zip
 
 }
 
@@ -142,7 +142,7 @@ build_treble() {
     esac
     lunch lineage_${TARGET}-userdebug
     make -j$(nproc --all) systemimage
-    mv $OUT/system.img ./build-output/LeaOS-20.0-$BUILD_DATE-${TARGET}.img
+    mv $OUT/system.img ./build-output/e-t-$BUILD_DATE-${TARGET}.img
 }
 
 if ${NOSYNC}
@@ -185,7 +185,7 @@ do
     echo "Starting personal " || echo " build for ${MODE} ${var}"
     build_${MODE} ${var}
 done
-ls ./build-output | grep 'LeaOS' || true
+ls ./build-output | grep 'e' || true
 
 END=`date +%s`
 ELAPSEDM=$(($(($END-$START))/60))
