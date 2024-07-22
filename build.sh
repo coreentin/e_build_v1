@@ -51,7 +51,7 @@ WITH_SU=true
 START=`date +%s`
 BUILD_DATE="$(date +%Y%m%d)"
 
-export OUT_DIR=~/build/LeaOS
+export OUT_DIR=~/build/e
 
 
 prep_build() {
@@ -61,9 +61,9 @@ prep_build() {
     
     if [ ${MODE} == "device" ]
     then
-       cp ./lineage_build_leaos/local_manifests_oss/*.xml .repo/local_manifests
+       cp ./e_build_v1/local_manifests_oss/*.xml .repo/local_manifests
     else
-       cp ./lineage_build_leaos/local_manifests_leaos/*.xml .repo/local_manifests
+       cp ./e_build_v1/local_manifests_leaos/*.xml .repo/local_manifests
     fi
     
     echo ""
@@ -91,7 +91,7 @@ prep_build() {
 
 apply_patches() {
     echo "Applying patch group ${1}"
-    bash ./lineage_build_leaos/apply_patches.sh ./lineage_patches_leaos/${1}
+    bash ./e_build_v1/apply_patches.sh ./e_patches_v1/${1}
 }
 
 prep_device() {
@@ -129,7 +129,7 @@ build_device() {
       	#mka bootimage 2>&1 | tee make_anne.log 
       	#mka recoveryimage 2>&1
         brunch ${1}
-        mv $OUT/lineage-*.zip ./build-output/LeaOS-OSS-20.0-$BUILD_DATE-${1}.zip
+        mv $OUT/lineage-*.zip ./build-output/e-OSS-t-$BUILD_DATE-${1}.zip
 
 }
 
@@ -145,9 +145,9 @@ build_treble() {
     make -j$(nproc --all) systemimage
     #make -j$(nproc --all) target-files-package otatools
 
-    #bash ./lineage_build_leaos/sign.sh "vendor/extra/keys" $OUT/signed-target_files.zip
+    #bash ./e_build_v1/sign.sh "vendor/extra/keys" $OUT/signed-target_files.zip
     #unzip -jqo $OUT/signed-target_files.zip IMAGES/system.img -d $OUT
-    mv $OUT/system.img ./build-output/LeaOS-20.0-$BUILD_DATE-${TARGET}.img
+    mv $OUT/system.img ./build-output/e-t-$BUILD_DATE-${TARGET}.img
 }
 
 if ${NOSYNC}
