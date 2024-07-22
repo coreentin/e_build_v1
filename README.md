@@ -14,8 +14,8 @@ Initialize your  /e/ OS workspace:
 
 Clone both this and the patches repos:
 
-    git clone https://github.com/iceows/lineage_build_leaos lineage_build_leaos -b lineage-20.0
-    git clone https://github.com/iceows/lineage_patches_leaos lineage_patches_leaos -b lineage-20.0
+    git clone https://github.com/coreentin/e_build_v1-t e_build_v1-t -b v1-t
+    git clone https://github.com/coreentin/e_patches_v1-t e_patches_v1-t -b v1-t
 
 Finally, start the build script (64VN = Vanilia / 64GN = GoogleApps):
 
