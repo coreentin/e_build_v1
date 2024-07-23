@@ -63,7 +63,7 @@ prep_build() {
     then
        cp ./e_build_v1/local_manifests_oss/*.xml .repo/local_manifests
     else
-       cp ./e_build_v1/local_manifests_leaos/*.xml .repo/local_manifests
+       cp ./e_build_v1/local_manifests_eos/*.xml .repo/local_manifests
     fi
     
     echo ""
