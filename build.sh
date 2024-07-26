@@ -51,7 +51,7 @@ WITH_SU=true
 START=`date +%s`
 BUILD_DATE="$(date +%Y%m%d)"
 
-export OUT_DIR=~/build/e
+export OUT_DIR=/eOS/GSI-build/
 
 
 prep_build() {
@@ -81,11 +81,12 @@ prep_build() {
     then
 	echo "no repo pick for device"
     else
-	repopick -t 13-taro-kalama -r -f
-	repopick 321337 -r -f # Deprioritize important developer notifications
-	repopick 321338 -r -f # Allow disabling important developer notifications
-	repopick 321339 -r -f # Allow disabling USB notifications
-	repopick 340916 -r # SystemUI: add burnIn protection     
+	echo "repo pick are desactivated"
+#	repopick -t 13-taro-kalama -r -f
+#	repopick 321337 -r -f # Deprioritize important developer notifications
+#	repopick 321338 -r -f # Allow disabling important developer notifications
+#	repopick 321339 -r -f # Allow disabling USB notifications
+#	repopick 340916 -r # SystemUI: add burnIn protection     
     fi
 }
 

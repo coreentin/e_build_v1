@@ -5,7 +5,9 @@
   <remote name="phh" fetch="https://github.com/phhusson/" />
   <remote name="tdroid" fetch="https://github.com/trebledroid/" />
   <remote name="iceows" fetch="https://github.com/iceows/" />
-    
+  <remote name="coreentin" fetch="https://github.com/coreentin/" />
+  <remote name="huawei-dev" fetch="https://github.com/huawei-dev/" />
+
   <!-- PHH or TD repo -->
   <project path="vendor/hardware_overlay" name="vendor_hardware_overlay" remote="tdroid" revision="pie" />
   <project path="device/phh/treble" name="device_phh_treble" remote="tdroid" revision="android-13.0" />
@@ -40,7 +42,8 @@
 
     <!-- vendor -->
     <project path="vendor/huawei/prague" name="android_vendor_huawei_prague" remote="iceows" revision="lineage-20.0" />
-    <project path="vendor/huawei/hi6250-8-common" name="android_vendor_huawei_hi6250-8-common" remote="iceows" revision="lineage-20.0" />
+<!--    <project path="vendor/huawei/hi6250-8-common" name="android_vendor_huawei_hi6250-8-common" remote="iceows" revision="lineage-20.0" />-->
+    <project path="vendor/huawei/hi6250-8-common" name="android_vendor_huawei_hi6250-8-common" remote="coreentin" revision="lineage-20.0" />
     <project path="vendor/huawei/anne" name="android_vendor_huawei_anne" remote="iceows" revision="lineage-20.0" />
     <project path="vendor/huawei/figo" name="android_vendor_huawei_figo" remote="iceows" revision="lineage-20.0" />
     <project path="vendor/huawei/hi6250-9-common" name="android_vendor_huawei_hi6250-9-common" remote="iceows" revision="lineage-20.0" />
@@ -58,6 +61,8 @@
     <project path="device/hisi/sepolicy" name="android_device_hisi_sepolicy" remote="iceows" revision="lineage-20.0" />
 
     <!-- hardware -->
+<!--    <project path="hardware/hisi" name="android_hardware_hisi" remote="github-hisi" revision="lineage-20" />
+    <project path="hardware/huawei" name="android_hardware_huawei" remote="github-hisi" revision="lineage-20" />-->
     <project path="hardware/hisi" name="android_hardware_hisi-hisi" remote="iceows" revision="lineage-20" />
     <project path="hardware/huawei" name="android_hardware_huawei-hisi" remote="iceows" revision="lineage-20" />
     
