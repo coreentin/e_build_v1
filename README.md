@@ -6,7 +6,7 @@ To get started with building  /e/ OS GSI, you'll need to get familiar with [Git 
 
 First, open a new Terminal window, create a new working directory for your LineageOS build (leaos for example) and navigate to it:
 
-    mkdir eos; cd eos
+    mkdir R; cd R
     
 Initialize your  /e/ OS workspace:
 
