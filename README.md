@@ -10,12 +10,12 @@ First, open a new Terminal window, create a new working directory for your Linea
     
 Initialize your  /e/ OS workspace:
 
-    repo init -u https://gitlab.e.foundation/e/os/android.git -b v1-t --git-lfs
+    repo init -u https://gitlab.e.foundation/e/os/android.git -b v1-r --git-lfs
 
 Clone both this and the patches repos:
 
-    git clone https://github.com/coreentin/e_build_v1-t e_build_v1 -b v1-t
-    git clone https://github.com/coreentin/e_patches_v1-t e_patches_v1 -b v1-t
+    git clone https://github.com/coreentin/e_build_v1-t e_build_v1 -b v1-r
+    git clone https://github.com/coreentin/e_patches_v1-t e_patches_v1 -b v1-r
 
 Finally, start the build script (64VN = Vanilia / 64GN = GoogleApps):
 
@@ -26,7 +26,7 @@ Be sure to update the cloned repos from time to time!
 
 ---
 
-EMUI 9 or EMUI 10 targets for Huawei re generated from AB images instead of source-built - refer to [huawei-creator](https://github.com/iceows/huawei-creator).
+EMUI 8 targets for Huawei re generated from AB images instead of source-built - refer to [huawei-creator](https://github.com/iceows/huawei-creator).
 
 ---
 
